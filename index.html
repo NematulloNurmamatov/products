@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dars 6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-800 text-white pt-10">
+
+    <!-- <div>
+        <input id="find" class="search px-2 py-1 text-yellow-500 rounded bg-gray-800 border w-[250px]" type="text" placeholder="search">
+        <button onclick="searchButton()" class="ml-[6px]"><i class="fa-solid fa-magnifying-glass text-[20px]"></i></button>
+    </div> -->
+    <!-- <div id="results"></div> -->
+
+
+    <div class="container w-[80%] mx-auto mb-10 flex justify-between">
+        <div>
+            <input oninput="searchButton(this)" id="find"
+                class="search px-2 py-1 text-yellow-500 rounded bg-gray-800 border w-[250px]" type="text"
+                placeholder="search">
+
+            <button id="results" class="ml-[6px]"><img src="" alt=""><i
+                    class="fa-solid fa-magnifying-glass text-[20px]"></i></button>
+        </div>
+        <div class="">
+            <select class="bg-gray-800 border px-2 py-1 rounded w-[250px]" name="" onchange="filterByCategory(this)">
+                <option value="men's clothing">men's clothing</option>
+                <option value="jewelery">jewelery</option>
+                <option value="electronics">electronics</option>
+                <option value="women's clothing">women's clothing</option>
+            </select>
+        </div>
+        <div>
+            <div>
+                <input class="px-2 py-1 text-black rounded w-[100px] bg-gray-800 border text-green-500 mr-2"
+                    type="number" oninput="minnum(this)" placeholder="Min">
+                <input class="px-2 py-1 text-black rounded w-[100px] bg-gray-800 border text-red-500" type="number"
+                    oninput="maxnum(this)" placeholder="Max">
+                <!-- <button class="ml-[6px]"><img src="" alt=""><i
+                        class="fa-solid fa-magnifying-glass text-[20px]"></i></button> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto w-[80%]">
+        <div class="card_box  grid grid-cols-3 gap-10">
+            <!-- <div class="card border w-[260px]">
+                <img src="./images (1).jpeg" alt="">
+                <div class="px-4 py-2">
+                    <h2 class="text-2xl font-bold">Product Name</h2>
+                    <p class="text-lg text-gray-500	">Product Description</p>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-1 mt-4 rounded">Add to Cart</button>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+    <br><br>
+
+    <div class="text-center">
+        <button id="more_btn" class="bg-white text-black py-2 px-4 mt-6 mb-6 rounded hover:bg-green-500 hover:text-white" onclick="moreHandle() ">More</button>
+    </div>
+
+    <script src="./products.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
